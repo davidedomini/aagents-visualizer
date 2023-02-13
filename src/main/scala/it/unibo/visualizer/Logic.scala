@@ -10,7 +10,7 @@ given context: ExecutionContext = ExecutionContext.global
 def readPositions(path: String): List[(Double, Double)] =
   Source
     .fromFile(path)
-    .getLines()//.toList
+    .getLines()
     .map(_.drop(1).dropRight(1))
     .map(l => (l.split(", ")(0).toDouble, l.split(", ")(1).toDouble))
     .toList
