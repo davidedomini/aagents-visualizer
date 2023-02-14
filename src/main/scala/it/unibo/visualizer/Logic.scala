@@ -29,6 +29,6 @@ object Logic extends App:
     .map { case ((a, b), c) => (a, b, c) }
     .foreach(
       pos =>
-        Thread.sleep(1000)
+        Thread.sleep(1)
         gui.updateRender(List(pos._1, pos._2, pos._3))
     )

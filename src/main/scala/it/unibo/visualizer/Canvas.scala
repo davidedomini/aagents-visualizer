@@ -14,5 +14,5 @@ class Canvas(w: Int, h: Int) extends JPanel:
   override def paintComponent(g: Graphics): Unit =
     super.paintComponent(g)
     g.setColor(Color.BLUE)
-    agents.foreach(ag => g.drawOval(ag._1.toInt, ag._2.toInt, 10, 10))
+    agents.foreach(ag => g.drawOval(ag._1.toInt + (w/2), ag._2.toInt + (h/2), 5, 5))
     
